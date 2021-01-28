@@ -1,0 +1,18 @@
+<div class="title">
+    <h2>{{ recipe.title }}</h2>
+    <p>{{ recipe.desc }}</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li *ngFor="let item of recipe.ingreds_list">
+            <p>{{ item.quantity }} {{ item.ingredient }}</p>
+        </li>
+    </ul>
+    <h3>Method:</h3>
+    <ol>
+        <li *ngFor="let item of recipe.method">
+            {{ item }}
+        </li>
+    </ol>
+    <!-- There should be an icon of a heart here with an onclick event that would pass a value back to the parent -->
+    <!-- This would locally update a favourited variable to 1 from 0 -->
+</div>

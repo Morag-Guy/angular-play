@@ -1,0 +1,12 @@
+<!-- Top part for header and search bar -->
+<!-- recipe card components (AKA LOOP OVER RESULTS) -->
+<!-- Search button would have included an icon -->
+<div>
+  <app-header></app-header>
+  <button (click)="fetchMyRecipes()">Search</button>
+  <section class="overlap">
+    <div class="recipes-container" *ngFor="let recipe of myRecipes">
+      <app-card [recipe]="recipe" class="recipe-card"></app-card>
+    </div>
+  </section>
+</div>

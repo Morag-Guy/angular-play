@@ -1,0 +1,18 @@
+button {
+    background: #88002d;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+    &:active {
+        background: #333333;
+    }
+}

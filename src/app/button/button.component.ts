@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { GetRecipesService } from '../get-recipes.service'; 
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -7,15 +6,8 @@ import { GetRecipesService } from '../get-recipes.service';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  public myRecipes: [];
-  constructor(private getRecipeService: GetRecipesService) { }
-
-  fetchMyRecipes() {
-    this.getRecipeService.getMyRecipes().subscribe((result) => {
-      console.log(result);
-      return this.myRecipes = result;
-    });
-  }
+  @Input() title: string;
+  constructor() { }
   ngOnInit(): void {
   }
 

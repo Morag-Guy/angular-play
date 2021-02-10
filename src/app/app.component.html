@@ -3,7 +3,7 @@
 <!-- Search button would have included an icon -->
 <div>
   <app-header></app-header>
-  <app-button></app-button>
+  <app-button (click)="fetchMyRecipes()"></app-button>
   <section class="overlap">
     <div class="recipes-container" *ngFor="let recipe of myRecipes">
       <app-card [recipe]="recipe" class="recipe-card"></app-card>

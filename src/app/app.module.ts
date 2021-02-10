@@ -7,12 +7,14 @@ import { HeaderComponent } from './header/header.component';
 
 import { GetRecipesService } from './get-recipes.service';
 import { CardComponent } from './card/card.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

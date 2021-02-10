@@ -9,7 +9,6 @@ import { GetRecipesService } from './get-recipes.service';
 export class AppComponent {
   title = 'mg-testapp-petrecipes';
   public recipes:[] = [];
-  public myRecipes: any;
 
   constructor(private getRecipeService: GetRecipesService) {}
   fetchRecipes() {
@@ -18,10 +17,4 @@ export class AppComponent {
     });
   }
   // this fetch recipes would have been for if I could get the API to work
-  fetchMyRecipes() {
-    this.getRecipeService.getMyRecipes().subscribe((result) => {
-      console.log(result);
-      return this.myRecipes = result;
-    });
-  }
 }

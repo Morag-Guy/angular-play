@@ -1,0 +1,60 @@
+button {
+    background: #88002d;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+    &:active {
+        background: #333333;
+    }
+}
+.overlap {
+    z-index: 2;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    animation: slideUp 0.3s 1 linear;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    .recipes-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 94%;
+        .recipe-card {
+            width: 100%;
+            padding: 10px;
+            background: #e7e7e7;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.3s 1 linear;
+        }
+    }
+}
+// MEDIA QUERIES
+@media only screen and (max-width: 1000px) {
+    .overlap {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+  }
+
+// KEYFRAMES
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px); 
+    }
+}
